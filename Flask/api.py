@@ -5,7 +5,7 @@ app = Flask(__name__)
 api = Api(app)
 
 TODOS = {
-    'todo1': {'task': 'build an API'},
+    'todo1': {'task': 'build an API pipiss'},
     'todo2': {'task': '?????'},
     'todo3': {'task': 'profit!'},
 }
