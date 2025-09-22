@@ -1,3 +1,14 @@
 __pycache__
 .vscode
 env
+
+.DS_Store
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.db
+*.sqlite3
+*.log   
+
+*.mp3
