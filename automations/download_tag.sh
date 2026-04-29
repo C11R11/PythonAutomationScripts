@@ -1,0 +1,1 @@
+yt-dlp --cookies-from-browser chrome -x --audio-format mp3 --add-metadata --ppa "ffmpeg: -id3v2_version 3" "$1"

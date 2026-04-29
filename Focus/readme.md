@@ -1,18 +1,42 @@
 # Python Automation Scripts
 
-## Setup or Modify Environment Variables
-To centralize and manage environment variables:
-1. Open your shell configuration file (e.g., `~/.zshrc` or `~/.bashrc`).
+## Setup or Modify Environment Variables in `/etc/bash.bashrc`
+To manage system-wide environment variables:
+1. Open the `/etc/bash.bashrc` file with a text editor (requires root privileges):
+   ```sh
+   sudo nano /etc/bash.bashrc
+   ```
 2. Add or modify environment variables as needed. For example:
    ```sh
-   export MY_VARIABLE="my_value"
-   export ANOTHER_VARIABLE="another_value"
+   export SYSTEM_VARIABLE="system_value"
+   export ANOTHER_SYSTEM_VARIABLE="another_system_value"
    ```
-3. Save the file and reload the shell configuration:
+
+   The base for the focus firewall is this
    ```sh
-   source ~/.zshrc  # For zsh
-   source ~/.bashrc # For bash
+   export BLOCK_SITES="\
+www.mercadolibre.cl \
+www.instagram.com \
+instagram.com \
+www.youtube.com \
+whatsapp.com \
+whatsapp.net \
+snr.whatsapp.net \
+cdn.whatsapp.net \
+wa.me \
+www.falabella.com \
+www.plazamusica.cl \
+listado.mercadolibre.cl \
+whatsappbrand.com"
    ```
+
+3. Save the file and exit the editor (in `nano`, press `CTRL+O`, then `Enter`, and `CTRL+X`).
+4. Reload the shell configuration to apply the changes:
+   ```sh
+   source /etc/bash.bashrc
+   ```
+
+These changes will apply to all users on the system.
 
 ## Move (Update) Scripts to `~/bin`
 To make your scripts globally accessible:
